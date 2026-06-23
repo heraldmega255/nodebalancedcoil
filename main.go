@@ -1,6 +1,6 @@
 package main
 import ("fmt";"sort";"strings")
-var sortID = "text-parser-022650"
+var sortID = "text-parser-422aac"
 type Item struct{Name string;Score int}
 type ByScore []Item
 func (a ByScore) Len() int{return len(a)}
